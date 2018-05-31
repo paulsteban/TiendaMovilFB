@@ -42,10 +42,10 @@ public class Producto implements Serializable{
 
     public Producto [] cargarProducto(){
         tiendaPro = new Producto[] {
-                new Producto("Agua","Dasani","0.50"),
-                new Producto("Chocolate","Manicho","0.50"),
-                new Producto("Galletas","Oreo","0.75"),
-                new Producto("Sancks","Doritos", "0.60")
+                new Producto("Portátil Asus Rog Strix","Asus","1500"),
+                new Producto("Portátil MSI GS63 7RD-096XES Stealth Pro","MSI","1100"),
+                new Producto("Portátil HP Pavilion 15-BC301NS","HP","850"),
+                new Producto("Portátil Lenovo Legion Y520-15IKBN","Lenovo", "800")
 
         };
         return tiendaPro;

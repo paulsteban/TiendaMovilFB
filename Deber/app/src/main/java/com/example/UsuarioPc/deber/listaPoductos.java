@@ -1,4 +1,4 @@
-package com.example.kathy.deber;
+package com.example.UsuarioPc.deber;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -85,11 +85,11 @@ public class listaPoductos extends AppCompatActivity {
                                 objProducto.getMarca().toString(),
                                 objProducto.getPrecio().toString()
                         ));
-                        Toast.makeText(getApplicationContext(),"Producto Comprado Ver en Comparar",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Producto añadido al carrito de compras",Toast.LENGTH_SHORT).show();
                         return true;
                     case R.id.comparar:
                         controladorArchivoObjeto.escribirArchivo(arrayListCompra,"Productos.txt");
-                        Toast.makeText(getApplicationContext(),"Productos Comprados",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Carrito de Compras",Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getApplicationContext(), listaCompra.class);
                         startActivity(intent);
                         return true;
