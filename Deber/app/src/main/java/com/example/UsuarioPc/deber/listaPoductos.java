@@ -1,4 +1,6 @@
 package com.example.UsuarioPc.deber;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -113,7 +115,7 @@ public class listaPoductos extends AppCompatActivity {
                         envioObjeto(objProducto);
                         return true;
                     case R.id.comprar:
-                        Toast.makeText(getApplicationContext(),"Debes Iniciar Sesion",Toast.LENGTH_SHORT).show();
+                        dialogoAlert();
                         return true;
                     default:
                         return false;
@@ -128,6 +130,37 @@ public class listaPoductos extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), productoSelec.class);
         intent.putExtra("producto", objProducto);
         startActivity(intent);
+    }
+
+    public void dialogoAlert() {
+
+        AlertDialog.Builder alertDialogo = new AlertDialog.Builder(this);//ES IMPORTANTE VER DE QUE LIBRERIA LLAMAMO ES LA DE LA APP, el contexto es this o getapplication context si estoy en un meoto
+        alertDialogo.setTitle("Tienda Virtual");
+        alertDialogo.setMessage("Desea comprar el producto,Inicia sesion");
+        alertDialogo.setPositiveButton("si", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int i) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                intent.putExtra("sesion", true);
+                startActivity(intent);
+            }
+        });
+        alertDialogo.setNegativeButton("no", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int i) {
+                Toast.makeText(getApplicationContext(), "Tu te lo pierdes", Toast.LENGTH_LONG).show();
+            }
+        });
+        alertDialogo.setNeutralButton("cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int i) {
+                Toast.makeText(getApplicationContext(), "Cancelar", Toast.LENGTH_LONG).show();
+            }
+        });
+        alertDialogo.setCancelable(false);//para cancelar sin aplastar el boton de cancelar
+        alertDialogo.create();
+        alertDialogo.show();
+
     }
 }
 

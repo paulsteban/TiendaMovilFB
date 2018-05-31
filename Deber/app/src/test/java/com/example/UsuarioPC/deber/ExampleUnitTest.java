@@ -1,4 +1,4 @@
-package com.example.kathy.deber;
+package com.example.UsuarioPC.deber;
 
 import org.junit.Test;
 

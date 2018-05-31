@@ -1,4 +1,4 @@
-package com.example.kathy.deber;
+package com.example.UsuarioPC.deber;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.kathy.deber", appContext.getPackageName());
+        assertEquals("com.example.UsuarioPC.deber", appContext.getPackageName());
     }
 }

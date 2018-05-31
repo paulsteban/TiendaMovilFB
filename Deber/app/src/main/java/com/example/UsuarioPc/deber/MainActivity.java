@@ -60,17 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 new FacebookCallback<LoginResult>() {
                     @Override
                     public void onSuccess(LoginResult loginResult) {
-                        /*info.setText(
-                                "User ID: "
-                                        + loginResult.getAccessToken().
-                                        getUserId()
-                                        + "n" +
-                                        "Auth Token: "
-                                        + loginResult.getAccessToken().
-                                        getToken()
-                        );
-                        makeToast(loginResult.getAccessToken().
-                                toString());*/
+
                         Profile profile = Profile.getCurrentProfile();
                         datos(profile);
 
@@ -90,6 +80,10 @@ public class MainActivity extends AppCompatActivity {
                         profileTracker.startTracking();
                         loginButton.setReadPermissions("user_friends");
                         loginButton.setReadPermissions("public_profile");
+                        Intent intents = new Intent(getApplicationContext(), listaPoductos.class);
+                        intents.putExtra("loging", verificarUser = "User".toString());
+
+                        startActivity(intents);
 
                     }
 

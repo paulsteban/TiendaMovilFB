@@ -18,7 +18,7 @@ import Producto.Producto;
 public class LeerEscribirArchivos {
     private File file = Environment.getExternalStorageDirectory();
     private String ruta = file.getAbsolutePath() + File.separator;
-
+/*
     public void escribirArchivo(Producto p, String nombre) {
 
         try {
@@ -32,22 +32,7 @@ public class LeerEscribirArchivos {
             Log.e("error", e.toString());
         }
     }
-
-    public void escribirArchivo(ArrayList<Producto> arrayListProductos, String nombre) {
-
-        try {
-            FileOutputStream fos = new FileOutputStream(ruta + nombre);
-            ObjectOutputStream out = new ObjectOutputStream(fos);
-            out.writeObject(arrayListProductos);
-            fos.close();
-        } catch (FileNotFoundException e) {
-            Log.e("Error Archivo", e.toString());
-        } catch (IOException e) {
-            Log.e("Error", e.toString());
-        }
-    }
-
-    public Producto leerArchivo(String nombre) {
+       public Producto leerArchivo(String nombre) {
         Producto p = null;
         try {
             FileInputStream fis = new FileInputStream(ruta + nombre);
@@ -62,6 +47,21 @@ public class LeerEscribirArchivos {
             Log.e("Error Persona", e.toString());
         }
         return p;
+    }
+*/
+
+    public void escribirArchivo(ArrayList<Producto> arrayListProductos, String nombre) {
+
+        try {
+            FileOutputStream fos = new FileOutputStream(ruta + nombre);
+            ObjectOutputStream out = new ObjectOutputStream(fos);
+            out.writeObject(arrayListProductos);
+            fos.close();
+        } catch (FileNotFoundException e) {
+            Log.e("Error Archivo", e.toString());
+        } catch (IOException e) {
+            Log.e("Error", e.toString());
+        }
     }
 
     public List<Producto> leerArchivos(String nombre) {

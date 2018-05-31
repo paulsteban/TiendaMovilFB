@@ -24,7 +24,6 @@ public class listaCompra extends AppCompatActivity {
         setContentView(R.layout.listacompra);
         listacompras = (ListView)findViewById(R.id.ListaCompras);
         your_array_list=controladorArchivo.leerArchivos("Productos.txt");
-       // your_array_list= Arrays.asList(new Producto().cargarProducto());
         adapterCarro = new ArrayAdapter<>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, your_array_list );
         listacompras.setAdapter(adapterCarro);
 

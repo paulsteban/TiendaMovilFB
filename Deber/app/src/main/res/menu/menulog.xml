@@ -2,5 +2,5 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:title="Ver" android:id="@+id/ver"/>
     <item android:title="Comprar" android:id="@+id/comprar"/>
-    <item android:title="Comparar" android:id="@+id/comparar"/>
+    <item android:title="Carrito_de_Compras" android:id="@+id/comparar"/>
 </menu>
